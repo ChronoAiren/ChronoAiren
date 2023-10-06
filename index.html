@@ -32,10 +32,10 @@
   <title>CBDi.inc</title>
   <link rel="manifest" href="manifest.json">
 
-<!--   <script>
+  <script>
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = "2585811463";
-  </script> -->
+  </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
@@ -59,10 +59,10 @@
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
-      // _flutter.loader.loadEntrypoint({
-      //   serviceWorker: {
-      //     serviceWorkerVersion: serviceWorkerVersion,
-      //   },
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
@@ -72,7 +72,8 @@
     });
   </script>
  <div class="main-content" id="loader-content">
-  <img href="assets/images/logomain.png" alt="My App Logo" />
+  <img src="favicon.png" alt="My App Logo" />
 </div>
+
 </body>
 </html>
